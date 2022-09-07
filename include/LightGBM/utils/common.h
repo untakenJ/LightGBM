@@ -77,8 +77,8 @@ inline static std::string Trim(std::string str) {
   if (str.empty()) {
     return str;
   }
-  str.erase(str.find_last_not_of(" \f\n\r\t\v") + 1);
-  str.erase(0, str.find_first_not_of(" \f\n\r\t\v"));
+  str.erase(str.find_last_not_of(" \f\n\r\v") + 1);
+  str.erase(0, str.find_first_not_of(" \f\n\r\v"));
   return str;
 }
 
