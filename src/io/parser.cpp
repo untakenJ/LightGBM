@@ -257,7 +257,7 @@ Parser* ParserFactory::getObject(std::string class_name, std::string config_str)
 }
 
 Parser* Parser::CreateParser(const char* filename, bool header, int num_features, int label_idx, bool precise_float_parser) {
-  const int n_read_line = 32;
+  const int n_read_line = 4;
   auto lines = ReadKLineFromFile(filename, header, n_read_line);
   int num_col = 0;
   DataType type = GetDataType(filename, header, lines, &num_col);
